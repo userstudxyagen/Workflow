@@ -1,0 +1,17 @@
+/* style.css */
+body {
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.block-container {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    color: #333;
+}
