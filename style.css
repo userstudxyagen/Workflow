@@ -1,17 +1,49 @@
-/* style.css */
-body {
-    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+/* Sanfte Übergänge überall */
+* {
+  transition: all 0.3s ease-in-out;
 }
 
+/* Glasiger Hintergrund mit Blur */
 .block-container {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 30px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
-h1, h2, h3, h4 {
-    font-weight: 600;
-    color: #333;
+/* Button Hover Effekt */
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Slide-In Animation für neue Tasks */
+.slide-in {
+  animation: slideIn 0.4s ease-out;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade-Out Animation für erledigte Tasks */
+.fade-out {
+  animation: fadeOut 0.4s ease forwards;
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
 }
